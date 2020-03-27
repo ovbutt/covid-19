@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, ScrollView} from 'react-native';
+import {Text, View, ScrollView, Image} from 'react-native';
 import {Colors} from '../helpers/Colors';
 import {Card} from 'native-base';
 import {
@@ -39,17 +39,17 @@ export default class Home extends Component {
             Help needy around you
           </Text>
         </View>
-        {/* <View
+        <View
           style={{
             justifyContent: 'center',
             alignItems: 'center',
             marginTop: 10,
           }}>
           <Text
-            style={{fontSize: 32, fontWeight: 'bold', color: Colors.dkGreen}}>
-            Coronavirus in Pakistan
+            style={{fontSize: 28, fontWeight: 'bold', color: Colors.dkGreen}}>
+            Coronavirus stats in Pakistan
           </Text>
-        </View> */}
+        </View>
 
         <Card
           style={{
@@ -216,8 +216,20 @@ export default class Home extends Component {
             {symptoms.map((item, index) => (
               <View
                 key={index}
-                style={{justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{fontSize: 18, marginTop: 10}}>{item.title}</Text>
+                style={{
+                  justifyContent: 'flex-start',
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                  marginLeft: 50,
+                }}>
+                <Image
+                  resizeMode="contain"
+                  style={{height: 30, width: 30}}
+                  source={item.icon}
+                />
+                <Text style={{fontSize: 22, marginTop: 10, marginLeft: 30}}>
+                  {item.title}
+                </Text>
               </View>
             ))}
           </View>
@@ -241,15 +253,19 @@ export default class Home extends Component {
                   alignItems: 'center',
                   flexDirection: 'row',
                 }}>
-                <Text style={{fontSize: 18, fontWeight: '800'}}>
-                  {index + 1} ){' '}
-                </Text>
+                <Image
+                  resizeMode="contain"
+                  style={{height: 30, width: 30, marginLeft: 20}}
+                  source={item.icon}
+                />
+
                 <Text
                   style={{
                     fontSize: 18,
                     width: '90%',
                     textAlign: 'left',
                     marginTop: 10,
+                    marginLeft: 10
                   }}>
                   {item.title}
                 </Text>
@@ -276,15 +292,19 @@ export default class Home extends Component {
                   alignItems: 'center',
                   flexDirection: 'row',
                 }}>
-                <Text style={{fontSize: 18, fontWeight: '800'}}>
-                  {index + 1} ){' '}
-                </Text>
+                <Image
+                  resizeMode="contain"
+                  style={{height: 30, width: 30, marginLeft: 20}}
+                  source={item.icon}
+                />
+
                 <Text
                   style={{
                     fontSize: 18,
                     width: '90%',
                     textAlign: 'left',
                     marginTop: 10,
+                    marginLeft: 10
                   }}>
                   {item.title}
                 </Text>
@@ -311,15 +331,19 @@ export default class Home extends Component {
                   alignItems: 'center',
                   flexDirection: 'row',
                 }}>
-                <Text style={{fontSize: 18, fontWeight: '800'}}>
-                  {index + 1} ){' '}
-                </Text>
+                <Image
+                  resizeMode="contain"
+                  style={{height: 30, width: 30, marginLeft: 20}}
+                  source={item.icon}
+                />
+
                 <Text
                   style={{
                     fontSize: 18,
                     width: '90%',
                     textAlign: 'left',
                     marginTop: 10,
+                    marginLeft: 10
                   }}>
                   {item.title}
                 </Text>
